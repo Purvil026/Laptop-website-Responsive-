@@ -1,0 +1,239 @@
+/* css reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+
+.logo-container, .nav-links, .cart{
+    display: flex;
+}
+
+.logo-container{
+    /* background-color: lightblue; */
+    flex: 1;
+
+}
+
+.logo{
+    font-weight: 400;
+    margin: 5px;
+}
+
+.logo-container h4{
+    margin-top: 17px;
+    margin-left: -29px;
+}
+
+nav{
+    /* background-color: lightcoral; */
+    flex: 2;
+
+}
+
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+    
+}
+
+.nav-link{
+    color: #757575;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.cart{
+    /* background-color: lightgreen; */
+    flex: 1;
+    justify-content: flex-end; /* will send the cart icon at the end of flexbox */
+
+}
+
+.home{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    /* background-color: lightpink; */
+    align-items: center;
+}
+
+.introduction{
+    /* background-color: lightpink; */
+    flex: 1;
+}
+
+.introtext h1{
+    font-size: 33px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.introtext p{
+    margin-top: 7px;
+    font-size: 22px;
+}
+
+.cta{
+    padding: 50px 0px 0px 0px;
+}
+
+.cta-select{
+    border: 2px solid rgb(22,82,240);
+    background-color: transparent;
+    color: rgb(22,82,240);
+    width: 150px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-add{
+    border: none;
+    background-color: rgb(22,82,240);
+    color: white;
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.cover{
+    flex: 0.5;
+    height: 40vh;
+}
+.cover img{
+    height: 50vh;
+    /* adding drop shadow */
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 1.5s ease;
+    height: 100%;
+
+    
+}
+
+.big-circle{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    height: 70%;
+    opacity: 0.5;
+}
+
+.med-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.5;
+
+}
+
+.small-circle{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: -1;
+    height: 50%;
+    opacity: 0.7;
+}
+
+.laptop-select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    right: 212px;
+    top: 80%;
+    width: 15%;
+}
+
+/* adding animation to the laptop */
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+@media screen and (max-width: 1024px) {
+    .home{
+        flex-direction: column;
+    }
+
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .introtext h1{
+        font-size: 30px;
+
+    }
+
+    .introtext p{
+        font-size: 18px;
+        padding: 10px 0px 0px 0px;
+    }
+
+    .cta{
+        padding: 40px 0px 0px 0px;
+   
+    }
+
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 10%;
+        transform: translate(50%, 5%);
+    }
+
+    .select-icon{
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .cover img{
+        height: 25%;
+    }
+
+    
+
+
+
+
+
+
+
+
+}
